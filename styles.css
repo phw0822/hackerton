@@ -1,0 +1,194 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #9d9d9d;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.left-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.character {
+  position: absolute;
+  width: 200px; /* 캐릭터 컨테이너 너비 */
+  height: 400px; /* 캐릭터 컨테이너 높이 */
+  margin: auto;
+}
+
+.character-part {
+  position: absolute;
+}
+
+/* 눈, 머리, 몸의 z-index 순서를 설정 */
+#character-eyes {
+  top: 15%; /* 눈의 위치 조정 */
+  left: 37%; /* 수평 위치 조정 */
+  width: 40%; /* 눈 크기 조정 */
+  height: auto; /* 비율에 맞게 높이 조정 */
+  z-index: 3; /* 눈을 가장 앞으로 */
+}
+
+#character-hair {
+  top: -3%; /* 머리 위치 조정 */
+  left: 18%; /* 수평 위치 조정 */
+  width: 75%; /* 머리 크기 조정 */
+  height: auto; /* 비율에 맞게 높이 조정 */
+  z-index: 2; /* 머리를 두 번째로 */
+}
+
+#character-body {
+  top: 10%; /* 몸의 위치 조정 */
+  left: 5%; /* 수평 위치 조정 */
+  width: 100%; /* 몸 크기 조정 (전체 너비 차지) */
+  height: auto; /* 비율에 맞게 높이 조정 */
+  z-index: 1; /* 몸을 가장 뒤로 */
+}
+
+.character-head,
+.character-body {
+  background-color: black;
+  border: 2px solid white;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-panel {
+  background-color: #888;
+  padding: 20px;
+  width: 300px;
+}
+
+.option-tabs {
+  display: flex;
+  flex-direction: column;
+}
+
+.tab {
+  background-color: #666;
+  border: none;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  text-align: left;
+  color: white;
+}
+
+.tab.active {
+  background: linear-gradient(to right, #ec008c, #fc6767);
+  color: white;
+}
+
+.options-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.options-grid {
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.options-grid.active {
+  display: grid;
+}
+
+.option-item {
+  background-color: #999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.option-item img.icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.option-item span {
+  color: black;
+  font-size: 14px;
+}
+
+.attribute {
+  position: relative;
+}
+
+.attribute-panel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: #f5f5f5;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.attribute-box {
+  background-color: #ddd;
+  width: 300px;
+  height: 320px;
+
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.attribute-box h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.attribute-content {
+  background-color: #ccc;
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+}
+
+.attribute-icon {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.attribute-content p {
+  margin: 5px 0;
+  font-size: 14px;
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>캐릭터 생성기</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- 왼쪽 패널: 캐릭터와 버튼 -->
+      <div class="left-panel">
+        <div class="character">
+          <img
+            id="character-eyes"
+            src="img/eyes1.png"
+            alt="Character Eyes"
+            class="character-part"
+          />
+          <img
+            id="character-hair"
+            src="img/hair1.png"
+            alt="Character Hair"
+            class="character-part"
+          />
+          <img
+            id="character-body"
+            src="img/apricot_medium.png"
+            alt="Character Body"
+            class="character-part"
+          />
+        </div>
+      </div>
+
+      <!-- 오른쪽 패널 -->
+      <div class="right-panel">
+        <div class="option-tabs">
+          <button class="tab active" data-target="eyes-options">
+            Eyes color
+          </button>
+          <button class="tab" data-target="height-options">Height</button>
+          <button class="tab" data-target="hair-options">Hair color</button>
+          <button class="tab" data-target="body-options">Human race</button>
+        </div>
+
+        <!-- 옵션들 -->
+        <div class="options-content">
+          <!-- 눈 색상 옵션 -->
+          <div id="eyes-options" class="options-grid active">
+            <div class="option-item">
+              <img src="img/dna1.png" alt="DNA" class="icon" />
+              <span>흑안</span>
+            </div>
+            <div class="option-item">
+              <img src="img/dna2.png" alt="DNA" class="icon" />
+              <span>녹안</span>
+            </div>
+            <div class="option-item">
+              <img src="img/dna3.png" alt="DNA" class="icon" />
+              <span>벽안(파랑)</span>
+            </div>
+            <div class="option-item">
+              <img src="img/dna4.png" alt="DNA" class="icon" />
+              <span>회색눈</span>
+            </div>
+            <div class="option-item">
+              <img src="img/dna5.png" alt="DNA" class="icon" />
+              <span>황안</span>
+            </div>
+          </div>
+
+          <!-- 키 옵션 -->
+          <div id="height-options" class="options-grid">
+            <div class="option-item">
+              <img src="img/dna1.png" alt="DNA" class="icon" />
+              <span>High</span>
+            </div>
+            <div class="option-item">
+              <img src="img/dna2.png" alt="DNA" class="icon" />
+              <span>Medium</span>
+            </div>
+            <div class="option-item">
+              <img src="img/dna3.png" alt="DNA" class="icon" />
+              <span>Short</span>
+            </div>
+          </div>
+
+          <!-- 머리 색상 옵션 -->
+          <div id="hair-options" class="options-grid">
+            <div class="option-item">
+              <img src="img/dna1.png" alt="DNA" class="icon" />
+              <span>흰색</span>
+            </div>
+            <div class="option-item">
+              <img src="img/dna2.png" alt="DNA" class="icon" />
+              <span>검정</span>
+            </div>
+            <div class="option-item">
+              <img src="img/dna3.png" alt="DNA" class="icon" />
+              <span>갈색</span>
+            </div>
+            <div class="option-item">
+              <img src="img/dna4.png" alt="DNA" class="icon" />
+              <span>노란색</span>
+            </div>
+          </div>
+
+          <!-- 인종 옵션 -->
+          <div id="body-options" class="options-grid">
+            <div class="option-item">
+              <img src="img/dna1.png" alt="DNA" class="icon" />
+              <span>Black</span>
+            </div>
+            <div class="option-item">
+              <img src="img/dna2.png" alt="DNA" class="icon" />
+              <span>Apricot</span>
+            </div>
+            <div class="option-item">
+              <img src="img/dna3.png" alt="DNA" class="icon" />
+              <span>White</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 하단 속성 패널 -->
+    <div class="attribute">
+      <div class="attribute-panel">
+        <div class="attribute-box">
+          <h3>Eyes</h3>
+          <div class="attribute-content"></div>
+        </div>
+        <div class="attribute-box">
+          <h3>Height</h3>
+          <div class="attribute-content"></div>
+        </div>
+        <div class="attribute-box">
+          <h3>Hair</h3>
+          <div class="attribute-content"></div>
+        </div>
+        <div class="attribute-box">
+          <h3>Human race</h3>
+          <div class="attribute-content"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
